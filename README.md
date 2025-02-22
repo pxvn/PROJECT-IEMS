@@ -1,77 +1,57 @@
 # Intelligent Energy Management System (IEMS)
+> ⚠️ **Currently in Deployment Phase**
+> - Some features are implemented as placeholders
+> - Ongoing development and optimization 
 
-## Overview
-IEMS is an advanced energy management system built on ESP32 that intelligently manages power distribution between solar, battery, and grid sources while ensuring system safety and efficiency.
+Author: Pavan Kalsariya and Dhruv Suthar
 
-https://github.com/user-attachments/assets/6483eeae-1abd-4807-b47a-2cae8a5b9dde
+Team: Teenage Engineering Works
+
+Version: 4.1 (22 FEB)
+
+
+
 ![IEMS DEMO VIDEO](https://github.com/user-attachments/assets/54c72df2-a1fb-4397-b787-678a62b644d6)
 
-## Hardware Requirements
-- ESP32 Developm
+![WhatsApp Image 2025-02-22 at 1 46 34 PM](https://github.com/user-attachments/assets/a58d535c-6a1e-41c2-97d7-b3b1842e2a3c)
 
+## Overview
+The **Intelligent Energy Management System (IEMS)** is an advanced energy management solution built on the ESP32 microcontroller. It intelligently manages power distribution between solar, battery, and grid sources while ensuring system safety, efficiency, and reliability. The system is designed for real-time monitoring, control, and optimization of energy usage.
 
-
-ent Board
-- DS18B20 Temperature Sensor
-- 2x INA219 Current/Voltage Sensors
-- ACS712 Current Sensor
-- ZMPT101B AC Voltage Sensor
-- SCT013 AC Current Sensor
-- 4x Relays for power distribution
-- LiFePO4 4S Battery (13V nominal)
-- Solar Panel Input (~13V)
+---
 
 ## Dependencies
-- Wire.h
-- OneWire
-- DallasTemperature
-- Adafruit_INA219
-- ZMPT101B
-- EmonLib
-- ESPAsyncWebServer
-- AsyncTCP
-- ArduinoJson
+- Wire.h - I2C communication
+- OneWire & DallasTemperature - Temperature sensor interface
+- Adafruit_INA219 - Current/voltage monitoring
+- ZMPT101B - AC voltage measurement
+- EmonLib - Energy monitoring
+- ESPAsyncWebServer - Web server functionality
+- AsyncTCP - Asynchronous TCP operations
+- ArduinoJson - JSON data handling
 
-## Features
-- Multiple power source management (Solar, Battery, Grid)
-- Automatic mode for optimal power source selection
-- Real-time temperature monitoring and fan control
-- Comprehensive sensor data logging
-- Web interface for monitoring and control
-- Fail-safe operation with degraded mode support
-- Rate-limited logging system
+## Key Features
+- **Multi-Source Power Management**: Intelligent switching between Solar, Battery, and Grid
+- **Real-Time Monitoring**: Temperature, current, voltage, and power consumption tracking
+- **Automated Control**: Smart decision-making for optimal power source selection
+- **Safety Systems**: 
+  - Temperature-based shutdown (>80°C)
+  - Overcurrent protection
+  - Voltage monitoring
+  - Automatic fan control
+- **Web Interface**: Modern dashboard for monitoring and control
+- **Data Logging**: Comprehensive system metrics recording
+- **Fail-Safe Operation**: Degraded mode support for system reliability
 
-## Installation
-1. Clone the repository
-2. Install required libraries through Arduino IDE
-3. Configure WiFi credentials in config.h
-4. Upload to ESP32
+## Project Structure
+```
+├── main.ino          # Main program file
+├── config.h          # Configuration and pin definitions
+├── webui.h           # Web interface HTML/CSS/JS
+├── SensorManager.h   # Sensor data management
+├── PowerManager.h    # Power source control
+├── SensorInit.h      # Sensor initialization
+└── Logger.h          # Logging system
+```
+---
 
-## File Structure
-- main.ino: Main program file
-- config.h: Configuration and pin definitions
-- webui.h: Web interface HTML/CSS/JS
-- SensorManager.h/cpp: Sensor data management
-- PowerManager.h/cpp: Power source control
-- SensorInit.h/cpp: Sensor initialization and error handling
-- Logger.h/cpp: Logging system
-
-## Usage
-1. Power up the system
-2. Connect to the ESP32's IP address
-3. Monitor and control through the web interface
-4. Check serial output for detailed logs
-
-## Safety Features
-- Temperature-based shutdown (>80°C)
-- Overcurrent protection
-- Voltage monitoring
-- Automatic fan control
-
-## Development
-- Author: Pavan Kalsariya
-- Organization: Teenage Engineering Works
-- Version: 2.1.0
-
-## License
-MIT License
