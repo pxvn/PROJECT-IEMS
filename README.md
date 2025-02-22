@@ -3,8 +3,15 @@
 ## Overview
 IEMS is an advanced energy management system built on ESP32 that intelligently manages power distribution between solar, battery, and grid sources while ensuring system safety and efficiency.
 
+https://github.com/user-attachments/assets/6483eeae-1abd-4807-b47a-2cae8a5b9dde
+![IEMS DEMO VIDEO](https://github.com/user-attachments/assets/54c72df2-a1fb-4397-b787-678a62b644d6)
+
 ## Hardware Requirements
-- ESP32 Development Board
+- ESP32 Developm
+
+
+
+ent Board
 - DS18B20 Temperature Sensor
 - 2x INA219 Current/Voltage Sensors
 - ACS712 Current Sensor
